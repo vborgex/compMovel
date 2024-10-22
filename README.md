@@ -1,0 +1,50 @@
+# Projetos Flutter
+
+Este repositório contém três projetos desenvolvidos em Flutter: **Agenda de Contatos**, **Buscador de GIF** e **Invertexto**. Cada um desses projetos demonstra diferentes funcionalidades e utilizações do Flutter para desenvolvimento de aplicativos móveis.
+
+## 1. Agenda de Contatos
+
+### Descrição
+A Agenda de Contatos é um aplicativo que permite aos usuários gerenciar uma lista de contatos. 
+
+### Tecnologias Utilizadas
+- Flutter
+- SQLite
+
+---
+
+## 2. Buscador de GIF
+
+### Descrição
+O Buscador de GIF é um aplicativo que permite aos usuários pesquisar e visualizar GIFs animados utilizando uma API de GIFs, como a Giphy API.
+
+### Tecnologias Utilizadas
+- Flutter
+- Giphy API 
+
+---
+
+## 3. Invertexto
+
+### Descrição
+Invertexto é um aplicativo que oferece três funcionalidades principais: busca de endereço por CEP, busca de informações por IP e conversão de números por extenso. O aplicativo utiliza APIs para realizar as buscas e exibir os dados de forma organizada.
+
+### Funcionalidades
+#### 3.1 Busca CEP
+- Entrada de CEP pelo usuário.
+- Consulta a uma API para buscar informações de endereço.
+- Exibição clara e organizada dos dados do endereço).
+
+#### 3.2 Busca IP
+- Entrada de IP pelo usuário.
+- Consulta a uma API para buscar informações relacionadas ao IP.
+- Exibição de dados como localização e provedor.
+
+#### 3.3 Por Extenso
+- Entrada de número pelo usuário.
+- Consulta a uma API para buscar o texto por extenso do número.
+- Exibição do número convertido em um formato legível.
+
+### Tecnologias Utilizadas
+- Flutter
+- API do https://www.invertexto.com/
