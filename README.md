@@ -1,6 +1,6 @@
-# Projetos Flutter
+# Projetos de Computação Natural
 
-Este repositório contém três projetos desenvolvidos em Flutter: **Agenda de Contatos**, **Buscador de GIF** e **Invertexto**. Cada um desses projetos demonstra diferentes funcionalidades e utilizações do Flutter para desenvolvimento de aplicativos móveis.
+Este repositório contém três projetos desenvolvidos em Flutter como parte da disciplina optativa de **Computação Móvel**, ministrada por **Carlos Eduardo Andrade Iatskiu**, na **Universidade Estadual do Centro Oeste**, no curso de **Ciência da Computação**. O objetivo da disciplina é proporcionar aos alunos uma experiência prática no desenvolvimento de aplicativos móveis, abordando conceitos fundamentais e boas práticas de programação.
 
 ## 1. Agenda de Contatos
 
@@ -33,7 +33,7 @@ Invertexto é um aplicativo que oferece três funcionalidades principais: busca 
 #### 3.1 Busca CEP
 - Entrada de CEP pelo usuário.
 - Consulta a uma API para buscar informações de endereço.
-- Exibição clara e organizada dos dados do endereço).
+- Exibição clara e organizada dos dados do endereço.
 
 #### 3.2 Busca IP
 - Entrada de IP pelo usuário.
@@ -48,3 +48,5 @@ Invertexto é um aplicativo que oferece três funcionalidades principais: busca 
 ### Tecnologias Utilizadas
 - Flutter
 - API do https://www.invertexto.com/
+
+Agradeço por visitar o repositório compMovel! Espero que você encontre inspiração e aprendizado nas atividades aqui apresentadas.
