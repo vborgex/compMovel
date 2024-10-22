@@ -47,6 +47,6 @@ Invertexto é um aplicativo que oferece três funcionalidades principais: busca 
 
 ### Tecnologias Utilizadas
 - Flutter
-- API do https://www.invertexto.com/
+- API do [Invertexto](https://www.invertexto.com/)
 
 Agradeço por visitar o repositório compMovel! Espero que você encontre inspiração e aprendizado nas atividades aqui apresentadas.
