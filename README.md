@@ -2,7 +2,7 @@
 
 Este repositório contém três projetos desenvolvidos em Flutter como parte da disciplina optativa de **Computação Móvel**, ministrada por **Carlos Eduardo Andrade Iatskiu**, na **Universidade Estadual do Centro Oeste**, no curso de **Ciência da Computação**. O objetivo da disciplina é proporcionar aos alunos uma experiência prática no desenvolvimento de aplicativos móveis, abordando conceitos fundamentais e boas práticas de programação.
 
-## 1. Agenda de Contatos(https://github.com/vborgex/compMovel/tree/24e43e9dee2a6d78c42b7a31be86f0fecf2dbecc/agenda_de_contatos)
+## 1. [Agenda de Contatos](https://github.com/vborgex/compMovel/tree/24e43e9dee2a6d78c42b7a31be86f0fecf2dbecc/agenda_de_contatos)
 
 ### Descrição
 A Agenda de Contatos é um aplicativo que permite aos usuários gerenciar uma lista de contatos. 
@@ -24,7 +24,7 @@ O Buscador de GIF é um aplicativo que permite aos usuários pesquisar e visuali
 
 ---
 
-## 3. Invertexto(https://github.com/vborgex/compMovel/tree/24e43e9dee2a6d78c42b7a31be86f0fecf2dbecc/invertexto)
+## 3. [Invertexto](https://github.com/vborgex/compMovel/tree/24e43e9dee2a6d78c42b7a31be86f0fecf2dbecc/invertexto)
 
 ### Descrição
 Invertexto é um aplicativo que oferece três funcionalidades principais: busca de endereço por CEP, busca de informações por IP e conversão de números por extenso. O aplicativo utiliza APIs para realizar as buscas e exibir os dados de forma organizada.
