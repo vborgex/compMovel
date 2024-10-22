@@ -21,7 +21,8 @@ class _LocalizaIPPageState extends State<LocalizaIPPage> {
   String? longitude;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(
+    return Scaffold(
+      appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 144, 195, 244),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -29,7 +30,8 @@ class _LocalizaIPPageState extends State<LocalizaIPPage> {
             Image.asset(
               'assets/imgs/invertexto.png',
               fit: BoxFit.contain,
-              height: 40,),
+              height: 40,
+            ),
           ],
         ),
         centerTitle: true,
@@ -38,16 +40,17 @@ class _LocalizaIPPageState extends State<LocalizaIPPage> {
       body: Padding(
         padding: EdgeInsets.all(10),
         child: Column(
-          children:<Widget> [
+          children: <Widget>[
             TextField(
               autofocus: true,
               decoration: InputDecoration(
-                labelText: "Escreva a cotação que quer consultar",
+                labelText: "Escreva o IP que quer consultar",
                 labelStyle: TextStyle(color: Color.fromARGB(255, 15, 129, 190)),
                 border: OutlineInputBorder(),
               ),
               keyboardType: TextInputType.number,
-              style: TextStyle(color: Color.fromARGB(255, 15, 129, 190), fontSize: 18),
+              style: TextStyle(
+                  color: Color.fromARGB(255, 15, 129, 190), fontSize: 18),
               onSubmitted: (value) {
                 setState(() {
                   campo = value;
@@ -58,23 +61,23 @@ class _LocalizaIPPageState extends State<LocalizaIPPage> {
               child: FutureBuilder(
                 future: localizarIP(campo),
                 builder: (context, snapshot) {
-                  switch(snapshot.connectionState){
+                  switch (snapshot.connectionState) {
                     case ConnectionState.waiting:
                     case ConnectionState.none:
                       return Container(
-                          width: 200.0,
-                          height: 200.0,
-                          alignment: Alignment.center,
-                          child: CircularProgressIndicator(
-                            valueColor: AlwaysStoppedAnimation<Color>(Color.fromARGB(255, 15, 129, 190)),
-                            strokeWidth: 5.0,
-                          ),
+                        width: 200.0,
+                        height: 200.0,
+                        alignment: Alignment.center,
+                        child: CircularProgressIndicator(
+                          valueColor: AlwaysStoppedAnimation<Color>(
+                              Color.fromARGB(255, 15, 129, 190)),
+                          strokeWidth: 5.0,
+                        ),
                       );
                     default:
-                      if (snapshot.hasError){
+                      if (snapshot.hasError) {
                         return Container();
-                      }
-                      else 
+                      } else
                         return exibeResultado(context, snapshot);
                   }
                 },
@@ -85,74 +88,69 @@ class _LocalizaIPPageState extends State<LocalizaIPPage> {
       ),
     );
   }
-  Widget exibeResultado (BuildContext context, AsyncSnapshot snapshot){
-      return Container(
-        padding: EdgeInsets.only(top: 10.0),
-        child:Column(
-          children: [
-            TextField(
-              decoration: InputDecoration(
-                labelText: snapshot.data["city"],
-                labelStyle: TextStyle(color: Color.fromARGB(255, 15, 129, 190)),
-                border: OutlineInputBorder(),
-              ),
-              style: TextStyle(color:Color.fromARGB(255, 15, 129, 190),fontSize:18),
-            ),
-            SizedBox(height: 10),
-            TextField(
-              decoration: InputDecoration(
-                labelText: snapshot.data["state"],
-                labelStyle: TextStyle(color: Color.fromARGB(255, 15, 129, 190)),
-                border: OutlineInputBorder(),
-              ),
-              style: TextStyle(color:Color.fromARGB(255, 15, 129, 190),fontSize:18),
-            ),
-            SizedBox(height: 10),
-            TextField(
-              decoration: InputDecoration(
-                labelText: snapshot.data["state_code"],
-                labelStyle: TextStyle(color: Color.fromARGB(255, 15, 129, 190)),
-                border: OutlineInputBorder(),
-              ),
-              style: TextStyle(color:Color.fromARGB(255, 15, 129, 190),fontSize:18),
-            ),
-            SizedBox(height: 10),
-            TextField(
-              decoration: InputDecoration(
-                labelText: snapshot.data["country"],
-                labelStyle: TextStyle(color: Color.fromARGB(255, 15, 129, 190)),
-                border: OutlineInputBorder(),
-              ),
-              style: TextStyle(color:Color.fromARGB(255, 15, 129, 190),fontSize:18),
-            ),
-            SizedBox(height: 10),
-            TextField(
-              decoration: InputDecoration(
-                labelText: snapshot.data["country_code"],
-                labelStyle: TextStyle(color: Color.fromARGB(255, 15, 129, 190)),
-                border: OutlineInputBorder(),
-              ),
-              style: TextStyle(color:Color.fromARGB(255, 15, 129, 190),fontSize:18),
-            ),
-            TextField(
-              decoration: InputDecoration(
-                labelText: snapshot.data["continent"],
-                labelStyle: TextStyle(color: Color.fromARGB(255, 15, 129, 190)),
-                border: OutlineInputBorder(),
-              ),
-              style: TextStyle(color:Color.fromARGB(255, 15, 129, 190),fontSize:18),
-            ),
-            TextField(
-              decoration: InputDecoration(
-                labelText: snapshot.data["time_zone"],
-                labelStyle: TextStyle(color: Color.fromARGB(255, 15, 129, 190)),
-                border: OutlineInputBorder(),
-              ),
-              style: TextStyle(color:Color.fromARGB(255, 15, 129, 190),fontSize:18),
-            ),
-          ],
-        ), 
-      );
 
-    }
+  Widget exibeResultado(BuildContext context, AsyncSnapshot snapshot) {
+    return Container(
+      padding: EdgeInsets.only(top: 10.0),
+      child: Column(
+        children: [
+          Text(
+            snapshot.data["city"] != null
+                ? 'Cidade: ${snapshot.data["city"]}'
+                : '',
+            style: TextStyle(
+                color: Color.fromARGB(255, 15, 129, 190), fontSize: 18),
+          ),
+          SizedBox(height: 10),
+          Text(
+            snapshot.data["state"] != null
+                ? 'Estado: ${snapshot.data["state"]}'
+                : '',
+            style: TextStyle(
+                color: Color.fromARGB(255, 15, 129, 190), fontSize: 18),
+          ),
+          SizedBox(height: 10),
+          Text(
+            snapshot.data["state_code"] != null
+                ? 'Código do Estado: ${snapshot.data["state_code"]}'
+                : '',
+            style: TextStyle(
+                color: Color.fromARGB(255, 15, 129, 190), fontSize: 18),
+          ),
+          SizedBox(height: 10),
+          Text(
+            snapshot.data["country"] != null
+                ? 'País: ${snapshot.data["country"]}'
+                : '',
+            style: TextStyle(
+                color: Color.fromARGB(255, 15, 129, 190), fontSize: 18),
+          ),
+          SizedBox(height: 10),
+          Text(
+            snapshot.data["country_code"] != null
+                ? 'Código do País: ${snapshot.data["country_code"]}'
+                : '',
+            style: TextStyle(
+                color: Color.fromARGB(255, 15, 129, 190), fontSize: 18),
+          ),
+          SizedBox(height: 10),
+          Text(
+            snapshot.data["continent"] != null
+                ? 'Continente: ${snapshot.data["continent"]}'
+                : '',
+            style: TextStyle(
+                color: Color.fromARGB(255, 15, 129, 190), fontSize: 18),
+          ),
+          SizedBox(height: 10),
+          Text(
+            snapshot.data["time_zone"] != null
+                ? 'Fuso Horário: ${snapshot.data["time_zone"]}'
+                : '',
+            style: TextStyle(
+                color: Color.fromARGB(255, 15, 129, 190), fontSize: 18),
+          ),
+        ],
+      ),
+    );
+  }
 }
